@@ -45,27 +45,25 @@ namespace stalkerCamo
             
             var rnd = new System.Random().Next(0, 2);
             var gameObject = __instance.gameObject;
+            var model = gameObject.FindChild("Stalker_02").FindChild("snout_shark_geo");
+            var skinnedRenderer = model.GetComponent<SkinnedMeshRenderer>();
             if (rnd == 0)
             {
                 var texture = Main.LoadTexture(@"./QMods/stalkerCamo/stalkerCamoDiff.png");
-            }else if(rnd == 1)
+                skinnedRenderer.sharedMaterial.mainTexture = texture;
+            }
+            else if(rnd == 1)
             {
                 var texture = Main.LoadTexture(@"./QMods/stalkerCamo/stalkerCamoDiff_0.png");
-            }else if(rnd == 2)
+                skinnedRenderer.sharedMaterial.mainTexture = texture;
+            }
+            else if(rnd == 2)
             {
                 var texture = Main.LoadTexture(@"./QMods/stalkerCamo/stalkerCamoDiff_1.png");
+                skinnedRenderer.sharedMaterial.mainTexture = texture;
             }
             
-            //var texture = Main.LoadTexture(@"./QMods/stalkerCamo/stalkerCamoDiff.png");
-            var model = gameObject.FindChild("Stalker_02").FindChild("snout_shark_geo");
-            //var model2 = gameObject.FindChild("Stalker_02").FindChild("snout_shark_blendshapes");
-            //var model3 = gameObject.FindChild("Stalker_02").FindChild("snout_shark_LOD1");
-            var skinnedRenderer = model.GetComponent<SkinnedMeshRenderer>();
-            //var skinnedRenderer2 = model2.GetComponent<SkinnedMeshRenderer>();
-            //var skinnedRenderer3 = model2.GetComponent<SkinnedMeshRenderer>();
-            skinnedRenderer.sharedMaterial.mainTexture = texture;
-            //skinnedRenderer2.sharedMaterial.mainTexture = texture;
-            //skinnedRenderer3.sharedMaterial.mainTexture = texture;
+
         }
         
     }
