@@ -7,8 +7,8 @@
     <ProjectGuid>{88ED9C9C-F56C-482A-9CAA-463FB44F90E9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>stalkerCamo</RootNamespace>
-    <AssemblyName>stalkerCamo</AssemblyName>
+    <RootNamespace>sandsharkCamo</RootNamespace>
+    <AssemblyName>sandsharkCamo</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
