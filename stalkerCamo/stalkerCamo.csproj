@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{23A7D82F-8F12-4B95-B623-F43D0AA066D1}</ProjectGuid>
+    <ProjectGuid>{88ED9C9C-F56C-482A-9CAA-463FB44F90E9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>sandsharkCamo</RootNamespace>
-    <AssemblyName>sandsharkCamo</AssemblyName>
+    <RootNamespace>stalkerCamo</RootNamespace>
+    <AssemblyName>stalkerCamo</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

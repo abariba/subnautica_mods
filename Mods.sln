@@ -5,7 +5,16 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stalkerCamo", "stalkerCamo\stalkerCamo.csproj", "{88ED9C9C-F56C-482A-9CAA-463FB44F90E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sandsharkCamo", "sandsharkCamo\sandsharkCamo.csproj", "{23A7D82F-8F12-4B95-B623-F43D0AA066D1}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Utilities", "Utilities\Utilities.shproj", "{CAF085C6-B94D-49AE-B6F9-FFC34C7E0F38}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Utilities\Utilities.projitems*{23a7d82f-8f12-4b95-b623-f43d0aa066d1}*SharedItemsImports = 4
+		Utilities\Utilities.projitems*{88ed9c9c-f56c-482a-9caa-463fb44f90e9}*SharedItemsImports = 4
+		Utilities\Utilities.projitems*{caf085c6-b94d-49ae-b6f9-ffc34c7e0f38}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -15,6 +24,10 @@ Global
 		{88ED9C9C-F56C-482A-9CAA-463FB44F90E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88ED9C9C-F56C-482A-9CAA-463FB44F90E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88ED9C9C-F56C-482A-9CAA-463FB44F90E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23A7D82F-8F12-4B95-B623-F43D0AA066D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23A7D82F-8F12-4B95-B623-F43D0AA066D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23A7D82F-8F12-4B95-B623-F43D0AA066D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23A7D82F-8F12-4B95-B623-F43D0AA066D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
