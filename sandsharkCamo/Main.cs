@@ -1,8 +1,8 @@
 ﻿using System;
-using System.IO;
 using System.Reflection;
 using Harmony;
 using UnityEngine;
+using Utilities;
 
 
 namespace sandsharkCamo
@@ -15,31 +15,14 @@ namespace sandsharkCamo
             harmony.PatchAll(Assembly.GetExecutingAssembly());
             Console.WriteLine("[sandsharkCamo] Initialized");
         }
-
-        // Ripped from: https://github.com/RandyKnapp/SubnauticaModSystem/blob/master/SubnauticaModSystem/Common/Utility/ImageUtils.cs
-        public static Texture2D LoadTexture(string path, TextureFormat format = TextureFormat.BC7, int width = 2, int height = 2)
-        {
-            if (File.Exists(path))
-            {
-                byte[] data = File.ReadAllBytes(path);
-                Texture2D texture2D = new Texture2D(width, height, format, false);
-                if (texture2D.LoadImage(data))
-                {
-                    return texture2D;
-                }
-            }
-            else
-            {
-                Console.WriteLine("[sandsharkCamo] ERROR: File not found " + path);
-            }
-            return null;
-        }
     }
 
     [HarmonyPatch(typeof(SandShark))]
     [HarmonyPatch("Start")]
-    internal class sandsharkCamo_Start_Patch
+    internal class SandShark_Start
     {
+        [HarmonyPostfix]
+        [HarmonyPriority(int.MinValue)]
         static void Postfix(SandShark __instance)
         {
     
@@ -59,7 +42,7 @@ namespace sandsharkCamo
                 var skinnedRenderer4 = model4.GetComponent<MeshRenderer>();
                 var skinnedRenderer5 = model5.GetComponent<MeshRenderer>();
 
-                var texture = Main.LoadTexture(@"./QMods/sandsharkCamo/sandsharkCamoDiff.png");
+                var texture = TextureUtils.LoadTexture(@"./QMods/sandsharkCamo/sandsharkCamoDiff.png");
 
                 skinnedRenderer.sharedMaterial.mainTexture = texture;
                 skinnedRenderer1.sharedMaterial.mainTexture = texture;

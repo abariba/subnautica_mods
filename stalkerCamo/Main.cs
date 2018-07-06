@@ -1,8 +1,8 @@
 ﻿using System;
-using System.IO;
 using System.Reflection;
 using Harmony;
 using UnityEngine;
+using Utilities;
 
 
 namespace stalkerCamo
@@ -15,31 +15,14 @@ namespace stalkerCamo
             harmony.PatchAll(Assembly.GetExecutingAssembly());
             Console.WriteLine("[stalkerCamo] Initialized");
         }
-
-        // Ripped from: https://github.com/RandyKnapp/SubnauticaModSystem/blob/master/SubnauticaModSystem/Common/Utility/ImageUtils.cs
-        public static Texture2D LoadTexture(string path, TextureFormat format = TextureFormat.BC7, int width = 2, int height = 2)
-        {
-            if (File.Exists(path))
-            {
-                byte[] data = File.ReadAllBytes(path);
-                Texture2D texture2D = new Texture2D(width, height, format, false);
-                if (texture2D.LoadImage(data))
-                {
-                    return texture2D;
-                }
-            }
-            else
-            {
-                Console.WriteLine("[stalkerCamo] ERROR: File not found " + path);
-            }
-            return null;
-        }
     }
 
     [HarmonyPatch(typeof(Stalker))]
     [HarmonyPatch("Start")]
-    internal class stalkerCamo_Start_Patch
+    internal class Stalker_Start_Patch
     {
+        [HarmonyPostfix]
+        [HarmonyPriority(int.MinValue)]
         static void Postfix(Stalker __instance)
         {
             
@@ -50,26 +33,26 @@ namespace stalkerCamo
                 var skinnedRenderer = model.GetComponent<SkinnedMeshRenderer>();
                 //if (rnd == 0)
                 //{
-                var texture = Main.LoadTexture(@"./QMods/stalkerCamo/stalkerCamoDiff.png");
+                var texture = TextureUtils.LoadTexture(@"./QMods/stalkerCamo/stalkerCamoDiff.png");
                 skinnedRenderer.sharedMaterial.mainTexture = texture;
             }
             else{
-                Console.WriteLine("[stalkerCamo] Error: SkinnedMeshRenderer not found on component");
+                Console.WriteLine("[stalkerCamo] An unknown error occured. Stalker game object is null");
             }
             //}
             //else if(rnd == 1)
             //{
-            //    var texture = Main.LoadTexture(@"./QMods/stalkerCamo/stalkerCamoDiff_0.png");
+            //    var texture = TextureUtils.LoadTexture(@"./QMods/stalkerCamo/stalkerCamoDiff_0.png");
             //    skinnedRenderer.sharedMaterial.mainTexture = texture;
-           // }
+            // }
             //else if(rnd == 2)
             //{
-             //   var texture = Main.LoadTexture(@"./QMods/stalkerCamo/stalkerCamoDiff_1.png");
-             //   skinnedRenderer.sharedMaterial.mainTexture = texture;
+            //   var texture = TextureUtils.LoadTexture(@"./QMods/stalkerCamo/stalkerCamoDiff_1.png");
+            //   skinnedRenderer.sharedMaterial.mainTexture = texture;
             //}
-            
+
 
         }
-        
+
     }
 }
