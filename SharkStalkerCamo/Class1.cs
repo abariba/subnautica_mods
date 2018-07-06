@@ -17,7 +17,7 @@ namespace SharkStalkerCamo
         }
     }
 
-    [HarmonyPatch(typeof(Creature), "Start")]
+    [HarmonyPatch(typeof(Creature), "InitializeOnce")]
     //[HarmonyPatch(typeof(Stalker),"Start")]
 
 //    you could workaround this

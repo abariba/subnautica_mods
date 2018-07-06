@@ -17,8 +17,7 @@ namespace sandsharkCamo
         }
     }
 
-    [HarmonyPatch(typeof(SandShark))]
-    [HarmonyPatch("Start")]
+    [HarmonyPatch(typeof(Creature), "InitializeOnce")]
     internal class SandShark_Start
     {
         [HarmonyPostfix]

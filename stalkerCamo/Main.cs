@@ -17,8 +17,7 @@ namespace stalkerCamo
         }
     }
 
-    [HarmonyPatch(typeof(Stalker))]
-    [HarmonyPatch("Start")]
+    [HarmonyPatch(typeof(Creature), "InitializeOnce")]
     internal class Stalker_Start_Patch
     {
         [HarmonyPostfix]
