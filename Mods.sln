@@ -11,10 +11,13 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Utilities", "Utilities\Util
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharkStalkerCamo", "SharkStalkerCamo\SharkStalkerCamo.csproj", "{2014A7C6-0DB2-4B18-884A-EACEC6329CBD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeeperCamo", "PeeperCamo\PeeperCamo.csproj", "{26B51A60-B5A7-4DF4-A111-ADFA9D3AB354}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Utilities\Utilities.projitems*{2014a7c6-0db2-4b18-884a-eacec6329cbd}*SharedItemsImports = 4
 		Utilities\Utilities.projitems*{23a7d82f-8f12-4b95-b623-f43d0aa066d1}*SharedItemsImports = 4
+		Utilities\Utilities.projitems*{26b51a60-b5a7-4df4-a111-adfa9d3ab354}*SharedItemsImports = 4
 		Utilities\Utilities.projitems*{88ed9c9c-f56c-482a-9caa-463fb44f90e9}*SharedItemsImports = 4
 		Utilities\Utilities.projitems*{caf085c6-b94d-49ae-b6f9-ffc34c7e0f38}*SharedItemsImports = 13
 	EndGlobalSection
@@ -35,6 +38,10 @@ Global
 		{2014A7C6-0DB2-4B18-884A-EACEC6329CBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2014A7C6-0DB2-4B18-884A-EACEC6329CBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2014A7C6-0DB2-4B18-884A-EACEC6329CBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26B51A60-B5A7-4DF4-A111-ADFA9D3AB354}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26B51A60-B5A7-4DF4-A111-ADFA9D3AB354}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26B51A60-B5A7-4DF4-A111-ADFA9D3AB354}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26B51A60-B5A7-4DF4-A111-ADFA9D3AB354}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
