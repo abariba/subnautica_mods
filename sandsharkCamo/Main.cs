@@ -48,11 +48,11 @@ namespace sandsharkCamo
                     catch (Exception e)
                 {
 
-                    Console.WriteLine("[sandsharkcamo]start error");
+                    //Console.WriteLine("[sandsharkcamo]start error");
                     Console.WriteLine(e.Message);
-                    Console.WriteLine("----------------------------------------------------------");
+                    //Console.WriteLine("----------------------------------------------------------");
                     Console.WriteLine(e.StackTrace);
-                    Console.WriteLine("End error");
+                    //Console.WriteLine("End error");
                 }
         }
             else{

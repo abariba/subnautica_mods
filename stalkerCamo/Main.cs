@@ -44,11 +44,11 @@ namespace stalkerCamo
                 catch (Exception e)
                 {
 
-                    Console.WriteLine("[StalkerCamo]start error");
+                    //Console.WriteLine("[StalkerCamo]start error");
                     Console.WriteLine(e.Message);
-                    Console.WriteLine("----------------------------------------------------------");
+                    //Console.WriteLine("----------------------------------------------------------");
                     Console.WriteLine(e.StackTrace);
-                    Console.WriteLine("End error");
+                    //Console.WriteLine("End error");
                 }
             }
             else{

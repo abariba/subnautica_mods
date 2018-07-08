@@ -35,18 +35,19 @@ namespace PeeperCamo
             if (gameObject != null)
             {
 
-                var model = gameObject.FindChild("models").FindChild("sand_shark_01").FindChild("sand_shark_rig_SandSharkGEO");
-                
-                var skinnedRenderer = model.GetComponent<SkinnedMeshRenderer>();
+                var creatures = gameObject.GetAllComponentsInChildren<Creature>(); //.FindChild("models").FindChild("sand_shark_01").FindChild("sand_shark_rig_SandSharkGEO");
+                foreach (GameObject creature in __instance) {
+                    var model = creature.FindChild("models").FindChild("sand_shark_01").FindChild("sand_shark_rig_SandSharkGEO");
+                    var skinnedRenderer = model.GetComponent<SkinnedMeshRenderer>();
 
-                var texture = TextureUtils.LoadTexture(@"./QMods/sandsharkCamo/sandsharkCamoDiff.png");
+                    var texture = TextureUtils.LoadTexture(@"./QMods/sandsharkCamo/sandsharkCamoDiff.png");
 
-                skinnedRenderer.sharedMaterial.mainTexture = texture;
+                    skinnedRenderer.sharedMaterial.mainTexture = texture;
 
-                //var model2 = gameObject.FindAncestor();
+                    //var model2 = gameObject.FindAncestor();
 
 
-
+                }
                 Console.WriteLine("[sandsharkCamo] Running as intended![this is a message to see if the sandshark creature gets called properly]");
                 Console.WriteLine("[peeperCamo] Running as intended![this is a message to see if the peeper creature gets called properly]");
             }
