@@ -11,17 +11,11 @@ namespace sandsharkCamo
     {
         public static void Patch()
         {
-            try
-            {
+
                 var harmony = HarmonyInstance.Create("com.abariba.sandsharkCamo");
                 harmony.PatchAll(Assembly.GetExecutingAssembly());
                 Console.WriteLine("[sandsharkCamo] Initialized");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                Console.WriteLine(e.StackTrace);
-            }
+
         }
     }
 
@@ -35,20 +29,32 @@ namespace sandsharkCamo
     
             var gameObject = __instance.gameObject;
             if(gameObject != null){
+                try
+                {
 
-                var model = gameObject.FindChild("models").FindChild("sand_shark_01").FindChild("sand_shark_rig_SandSharkGEO");
-
-
-                var skinnedRenderer = model.GetComponent<SkinnedMeshRenderer>();
-
-
-                var texture = TextureUtils.LoadTexture(@"./QMods/sandsharkCamo/sandsharkCamoDiff.png");
-
-                skinnedRenderer.sharedMaterial.mainTexture = texture;
+                    var model = gameObject.FindChild("models").FindChild("sand_shark_01").FindChild("sand_shark_rig_SandSharkGEO");
 
 
-                Console.WriteLine("[sandsharkCamo] Running as intended![this is a message to see if the sandshark creature gets called properly]");
-            }
+                    var skinnedRenderer = model.GetComponent<SkinnedMeshRenderer>();
+
+
+                    var texture = TextureUtils.LoadTexture(@"./QMods/sandsharkCamo/sandsharkCamoDiff.png");
+
+                    skinnedRenderer.sharedMaterial.mainTexture = texture;
+
+
+                    Console.WriteLine("[sandsharkCamo] Running as intended![this is a message to see if the sandshark creature gets called properly]");
+                }
+                    catch (Exception e)
+                {
+
+                    Console.WriteLine("[sandsharkcamo]start error");
+                    Console.WriteLine(e.Message);
+                    Console.WriteLine("----------------------------------------------------------");
+                    Console.WriteLine(e.StackTrace);
+                    Console.WriteLine("End error");
+                }
+        }
             else{
                 Console.WriteLine("[sandsharkCamo] Error: SkinnedMeshRenderer not found on component");
             }
