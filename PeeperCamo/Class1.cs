@@ -37,7 +37,7 @@ namespace PeeperCamo
     {
         [HarmonyPostfix]
         [HarmonyPriority(int.MinValue)]
-        static void Postfix(SandShark __instance)
+        static void Postfix(Creature __instance)
         {
 
             var gameObject = __instance.gameObject;
