@@ -50,17 +50,17 @@ namespace PeeperCamo
             {
 
                 var model = gameObject.FindChild("models").FindChild("sand_shark_01").FindChild("sand_shark_rig_SandSharkGEO");
-                var gameObject3 = Main.FindParentWithTag(gameObject, "resources.assets") ; //.FindChild("model").FindChild("peeper").FindChild("aqua_bird").FindChild("peeper");
                 
-
                 var skinnedRenderer = model.GetComponent<SkinnedMeshRenderer>();
-                
-
 
                 var texture = TextureUtils.LoadTexture(@"./QMods/sandsharkCamo/sandsharkCamoDiff.png");
-                var texture2 = TextureUtils.LoadTexture(@"./QMods/sandsharkCamo/sandsharkCamoDiff.png");
 
                 skinnedRenderer.sharedMaterial.mainTexture = texture;
+                Destroy(gameObject);
+
+                var texture2 = TextureUtils.LoadTexture(@"./QMods/sandsharkCamo/sandsharkCamoDiff.png");
+
+                
                 var model2 = gameObject3.FindChild("Peeper").FindChild("model").FindChild("peeper").FindChild("aqua_bird").FindChild("peeper");
                 var skinnedRenderer2 = model2.GetComponent<SkinnedMeshRenderer>();
                 skinnedRenderer2.sharedMaterial.mainTexture = texture2;
