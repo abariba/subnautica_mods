@@ -9,11 +9,19 @@ namespace stalkerCamo
 {
     public class Main
     {
+        
         public static void Patch()
         {
-            var harmony = HarmonyInstance.Create("com.abariba.stalkerCamo");
-            harmony.PatchAll(Assembly.GetExecutingAssembly());
-            Console.WriteLine("[stalkerCamo] Initialized");
+            try
+            {
+                var harmony = HarmonyInstance.Create("com.abariba.stalkerCamo");
+                harmony.PatchAll(Assembly.GetExecutingAssembly());
+                Console.WriteLine("[stalkerCamo] Initialized");
+            }
+            catch(Exception e) {
+                Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace);
+            }
         }
     }
 
@@ -21,7 +29,7 @@ namespace stalkerCamo
     internal class Stalker_Start_Patch
     {
         [HarmonyPostfix]
-        [HarmonyPriority(int.MinValue)]
+        //[HarmonyPriority(int.MinValue)]
         static void Postfix(Stalker __instance)
         {
             
