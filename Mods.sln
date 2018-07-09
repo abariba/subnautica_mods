@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sandsharkCamo", "sandsharkC
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Utilities", "Utilities\Utilities.shproj", "{CAF085C6-B94D-49AE-B6F9-FFC34C7E0F38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharkStalkerCamo", "SharkStalkerCamo\SharkStalkerCamo.csproj", "{2014A7C6-0DB2-4B18-884A-EACEC6329CBD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReaperCamo", "SharkStalkerCamo\ReaperCamo.csproj", "{2014A7C6-0DB2-4B18-884A-EACEC6329CBD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeeperCamo", "PeeperCamo\PeeperCamo.csproj", "{26B51A60-B5A7-4DF4-A111-ADFA9D3AB354}"
 EndProject

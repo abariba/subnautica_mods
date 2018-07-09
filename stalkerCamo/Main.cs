@@ -22,42 +22,34 @@ namespace stalkerCamo
     }
 
     [HarmonyPatch(typeof(Stalker), "InitializeOnce")]
-    internal class Stalker_Start_Patch
+    internal class Stalker_Start
     {
         [HarmonyPostfix]
         [HarmonyPriority(int.MinValue)]
         static void Postfix(Stalker __instance)
         {
-            
-            //var rnd = new System.Random().Next(0, 4);
-            var gameObject = __instance.gameObject;
-           
-            var model = gameObject.FindChild("Stalker_02").FindChild("snout_shark_geo");
-            if (model != null)
+            try
             {
-                var skinnedRenderer = model.GetComponent<SkinnedMeshRenderer>();
-                //if (rnd == 0)
-                //{
-                var texture = TextureUtils.LoadTexture(@"./QMods/stalkerCamo/stalkerCamoDiff.png");
-                skinnedRenderer.sharedMaterial.mainTexture = texture;
-
+                var model = Findstalker.Find_stalker(__instance);
+                if (model != null || true)
+                {
+                    var skinnedRenderer = model.GetComponent<SkinnedMeshRenderer>();
+                    var texture = TextureUtils.LoadTexture(@"./QMods/stalkerCamo/stalkerCamoDiff.png");
+                    skinnedRenderer.sharedMaterial.mainTexture = texture;
+                    Console.WriteLine("[stalkerCamo] Running as intended![this is a message to see if the stalker creature gets called properly]");
+                }
+                else
+                {
+                    Console.WriteLine("[stalkerCamo] An unknown error occured. Stalker game object is null");
+                }
             }
-            else{
-                Console.WriteLine("[stalkerCamo] An unknown error occured. Stalker game object is null");
+            catch (Exception e)
+            {
+                string naam = "stalker";
+                Console.WriteLine("[" + naam + "]" + e.Message);
+                Console.WriteLine("[" + naam + "]" + e.StackTrace);
+                Console.WriteLine("End error"+naam);
             }
-            //}
-            //else if(rnd == 1)
-            //{
-            //    var texture = TextureUtils.LoadTexture(@"./QMods/stalkerCamo/stalkerCamoDiff_0.png");
-            //    skinnedRenderer.sharedMaterial.mainTexture = texture;
-            // }
-            //else if(rnd == 2)
-            //{
-            //   var texture = TextureUtils.LoadTexture(@"./QMods/stalkerCamo/stalkerCamoDiff_1.png");
-            //   skinnedRenderer.sharedMaterial.mainTexture = texture;
-            //}
-
-
         }
 
     }

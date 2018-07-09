@@ -7,8 +7,8 @@
     <ProjectGuid>{2014A7C6-0DB2-4B18-884A-EACEC6329CBD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SharkStalkerCamo</RootNamespace>
-    <AssemblyName>SharkStalkerCamo</AssemblyName>
+    <RootNamespace>ReaperCamo</RootNamespace>
+    <AssemblyName>ReaperCamo</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

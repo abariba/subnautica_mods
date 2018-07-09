@@ -10,13 +10,17 @@
 using System;
 using System.IO;
 using UnityEngine;
+using Harmony;
+//using UnityEngine;
+using Utilities;
+
 
 namespace Utilities
 {
     public class TextureUtils
     {
         // Ripped from: https://github.com/RandyKnapp/SubnauticaModSystem/blob/master/SubnauticaModSystem/Common/Utility/ImageUtils.cs
-        public static Texture2D LoadTexture(string path, TextureFormat format = TextureFormat.BC7, int width = 2, int height = 2)
+        public static Texture2D LoadTexture(string path, string callingmod = "sandsharkCamo", TextureFormat format = TextureFormat.BC7, int width = 2, int height = 2)
         {
             if (File.Exists(path))
             {
@@ -29,9 +33,106 @@ namespace Utilities
             }
             else
             {
-                Console.WriteLine("[sandsharkCamo] ERROR: File not found " + path);
+                Console.WriteLine("["+callingmod+"] ERROR: File not found " + path);
             }
             return null;
+        }
+    }
+
+    [HarmonyPatch(typeof(Boomerang), "InitializeOnce")]
+    public class Findboomerang
+    {
+
+        public static GameObject Find_boomerang(Boomerang __instance)
+        {
+            var gameObject = __instance.gameObject;
+            try
+            {
+                Console.WriteLine("utils succes");
+                return gameObject.FindChild("model").FindChild("Small_Fish_01");//.FindChild("Stalker_02").FindChild("snout_shark_geo"); ;
+            }
+            catch
+            {
+                Console.WriteLine("utils fail");
+                return gameObject;
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(Stalker), "InitializeOnce")]
+    public class Findstalker
+    {
+
+        public static GameObject Find_stalker(Stalker __instance)
+        {
+            var gameObject = __instance.gameObject;
+            try
+            {
+                Console.WriteLine("utils succes");
+                return gameObject.FindChild("Stalker_02").FindChild("snout_shark_geo");//.FindChild("Stalker_02").FindChild("snout_shark_geo"); ;
+            }
+            catch
+            {
+                Console.WriteLine("utils fail");
+                return gameObject;
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(Peeper), "InitializeOnce")]
+    public class Findpeeper
+    {
+
+        public static GameObject Find_peeper(Peeper __instance)
+        {
+            var gameObject = __instance.gameObject;
+            try
+            {
+                Console.WriteLine("utils succes");
+                return gameObject.FindChild("model").FindChild("peeper").FindChild("aqua_bird").FindChild("peeper");//.FindChild("Stalker_02").FindChild("snout_shark_geo"); ;
+            }
+            catch
+            {
+                Console.WriteLine("utils fail");
+                return gameObject;
+            }
+        }
+    }
+    [HarmonyPatch(typeof(SandShark), "InitializeOnce")]
+    public class Findsandshark { 
+        public static GameObject Find_sandshark(SandShark __instance)
+        {
+            var gameObject = __instance.gameObject;
+            try
+            {
+                Console.WriteLine("utils succes");
+                return gameObject.FindChild("models").FindChild("sand_shark_01").FindChild("sand_shark_rig_SandSharkGEO");//.FindChild("Stalker_02").FindChild("snout_shark_geo"); ;
+            }
+            catch
+            {
+                Console.WriteLine("utils fail");
+                return gameObject;
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(ReaperLeviathan), "InitializeOnce")]
+    public class Findreaper
+    {
+
+        public static GameObject Find_reaper(ReaperLeviathan __instance)
+        {
+            var gameObject = __instance.gameObject;
+            try
+            {
+                Console.WriteLine("utils succes");
+                return gameObject.FindChild("reaper_leviathan").FindChild("reaper_leviathan_geo");//.FindChild("Stalker_02").FindChild("snout_shark_geo"); ;
+            }
+            catch
+            {
+                Console.WriteLine("utils fail");
+                return gameObject;
+            }
         }
     }
 }
