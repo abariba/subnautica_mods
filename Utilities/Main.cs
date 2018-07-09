@@ -126,7 +126,7 @@ namespace Utilities
             try
             {
                 Console.WriteLine("utils succes");
-                return gameObject.FindChild("reaper_leviathan").FindChild("reaper_leviathan_geo");//.FindChild("Stalker_02").FindChild("snout_shark_geo"); ;
+                return gameObject.FindChild("reaper_leviathan").FindChild("Reaper_Leviathan_geo");//.FindChild("Stalker_02").FindChild("snout_shark_geo"); ;
             }
             catch
             {

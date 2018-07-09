@@ -17,13 +17,13 @@ namespace ReaperCamo
         }
     }
 
-    
+
     //[HarmonyPatch(typeof(Stalker),"Start")]
 
-//    you could workaround this
-//have a main mod that hooks Creature.Start but have it loop through a static public List<CreaturePatches>
-//you can then make QMods load it early and have your other mods load later on, again with QMods
-//there shouldn't be any problems referencing the main mod from your other mods(edited)
+    //    you could workaround this
+    //have a main mod that hooks Creature.Start but have it loop through a static public List<CreaturePatches>
+    //you can then make QMods load it early and have your other mods load later on, again with QMods
+    //there shouldn't be any problems referencing the main mod from your other mods(edited)
 
 
 
@@ -42,7 +42,7 @@ namespace ReaperCamo
 
             if (gameObject1 != null)
             {
-               
+
 
                 var model = Findreaper.Find_reaper(__instance);
                 Console.WriteLine("[" + naam + "Camo] Initialized");
@@ -55,7 +55,7 @@ namespace ReaperCamo
                 sandshark_skinnedRenderer.sharedMaterial.mainTexture = texture;
 
 
-                Console.WriteLine("[" + naam + "Camo] Running as intended![this is a message to see if the "+naam+" creature gets called properly!]");
+                Console.WriteLine("[" + naam + "Camo] Running as intended![this is a message to see if the " + naam + " creature gets called properly!]");
             }
             else
             {
@@ -64,7 +64,7 @@ namespace ReaperCamo
 
         }
     }
-    
+
 
 
 

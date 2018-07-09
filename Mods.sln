@@ -9,17 +9,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sandsharkCamo", "sandsharkC
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Utilities", "Utilities\Utilities.shproj", "{CAF085C6-B94D-49AE-B6F9-FFC34C7E0F38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReaperCamo", "SharkStalkerCamo\ReaperCamo.csproj", "{2014A7C6-0DB2-4B18-884A-EACEC6329CBD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeeperCamo", "PeeperCamo\PeeperCamo.csproj", "{26B51A60-B5A7-4DF4-A111-ADFA9D3AB354}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoomerangCamo", "BoomerangCamo\BoomerangCamo.csproj", "{B028880A-8042-46C8-87D6-82CF6AEDCAB5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReaperCamo", "ReaperLeviathanCamo\ReaperCamo.csproj", "{2A73FEC5-0215-40C3-A2E0-18B394E5EAE8}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Utilities\Utilities.projitems*{2014a7c6-0db2-4b18-884a-eacec6329cbd}*SharedItemsImports = 4
 		Utilities\Utilities.projitems*{23a7d82f-8f12-4b95-b623-f43d0aa066d1}*SharedItemsImports = 4
 		Utilities\Utilities.projitems*{26b51a60-b5a7-4df4-a111-adfa9d3ab354}*SharedItemsImports = 4
+		Utilities\Utilities.projitems*{2a73fec5-0215-40c3-a2e0-18b394e5eae8}*SharedItemsImports = 4
 		Utilities\Utilities.projitems*{88ed9c9c-f56c-482a-9caa-463fb44f90e9}*SharedItemsImports = 4
 		Utilities\Utilities.projitems*{b028880a-8042-46c8-87d6-82cf6aedcab5}*SharedItemsImports = 4
 		Utilities\Utilities.projitems*{caf085c6-b94d-49ae-b6f9-ffc34c7e0f38}*SharedItemsImports = 13
@@ -37,10 +37,6 @@ Global
 		{23A7D82F-8F12-4B95-B623-F43D0AA066D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23A7D82F-8F12-4B95-B623-F43D0AA066D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23A7D82F-8F12-4B95-B623-F43D0AA066D1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2014A7C6-0DB2-4B18-884A-EACEC6329CBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2014A7C6-0DB2-4B18-884A-EACEC6329CBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2014A7C6-0DB2-4B18-884A-EACEC6329CBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2014A7C6-0DB2-4B18-884A-EACEC6329CBD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{26B51A60-B5A7-4DF4-A111-ADFA9D3AB354}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{26B51A60-B5A7-4DF4-A111-ADFA9D3AB354}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26B51A60-B5A7-4DF4-A111-ADFA9D3AB354}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -49,6 +45,10 @@ Global
 		{B028880A-8042-46C8-87D6-82CF6AEDCAB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B028880A-8042-46C8-87D6-82CF6AEDCAB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B028880A-8042-46C8-87D6-82CF6AEDCAB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A73FEC5-0215-40C3-A2E0-18B394E5EAE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A73FEC5-0215-40C3-A2E0-18B394E5EAE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A73FEC5-0215-40C3-A2E0-18B394E5EAE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A73FEC5-0215-40C3-A2E0-18B394E5EAE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

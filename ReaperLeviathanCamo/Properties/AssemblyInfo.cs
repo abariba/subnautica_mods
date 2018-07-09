@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SharkStalkerCamo")]
+[assembly: AssemblyTitle("ReaperLeviathanCamo")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SharkStalkerCamo")]
+[assembly: AssemblyProduct("ReaperLeviathanCamo")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2014a7c6-0db2-4b18-884a-eacec6329cbd")]
+[assembly: Guid("2a73fec5-0215-40c3-a2e0-18b394e5eae8")]
 
 // Version information for an assembly consists of the following four values:
 //
