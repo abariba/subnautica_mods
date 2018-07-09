@@ -11,15 +11,14 @@ namespace sandsharkCamo
     {
         public static void Patch()
         {
-
-                var harmony = HarmonyInstance.Create("com.abariba.sandsharkCamo");
-                harmony.PatchAll(Assembly.GetExecutingAssembly());
-                Console.WriteLine("[sandsharkCamo] Initialized");
+            var harmony = HarmonyInstance.Create("com.abariba.sandsharkCamo");
+            harmony.PatchAll(Assembly.GetExecutingAssembly());
+            Console.WriteLine("[sandsharkCamo] Initialized");
 
         }
     }
 
-    [HarmonyPatch(typeof(SandShark), "Start")]
+    [HarmonyPatch(typeof(SandShark), "InitializeOnce")]
     internal class SandShark_Start
     {
         [HarmonyPostfix]
